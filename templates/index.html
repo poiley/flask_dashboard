@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Home</title>
+        <link rel="stylesheet"  href="static/css/main.css">
+
+        <script>
+                function startTime() {
+                    var today = new Date();
+                    var h = today.getHours();
+                    var m = checkTime(today.getMinutes());
+                    var s = checkTime(today.getSeconds());
+
+                    document.getElementById('time').innerHTML = h + ":" + m + ":" + s;
+                    t = setTimeout(function(){ startTime() }, 500);
+                }
+                
+                function checkTime(i) {
+                    if (i<10) {
+                        i="0" + i;
+                    }
+                    return i;
+                }
+                </script>
+    </head>
+
+    <body onload="startTime()">
+        <a class="twitter_timeline"
+            href="https://twitter.com/TwitterDev"
+            data-width="300"
+            data-height="300">
+            Tweets by @TwitterDev
+        </a>
+
+        <div class="news_container">
+            <h4>news</h4>
+            {{ headlines }}
+        </div>
+
+        <div class="weather_container"> 
+            <h4>weather</h4>
+            {{ weather }} 
+        </div>
+
+        <div class="class_container">
+            <h4>classes</h4>
+            {{ classes }}
+        </div>
+
+        <div class="homework_container">
+            <h4>homework</h4>
+            {{ homework }}
+        </div>
+
+        <div class="clock">
+            <div id="time""></div>
+        </div>
+        
+    </body>
+    </html>

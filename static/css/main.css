@@ -1,0 +1,62 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans);
+html, body { height: 100%; font-family: "Open Sans",serif;}
+
+.twitter_timeline {
+    padding: 10px;
+    margin: 10px;
+    width: 20%;
+    float: left;
+    border: 7px solid black;
+    display:block;
+}
+
+.news_container {
+    padding: 10px;
+    margin: 10px;
+    width: 20%;
+    float: left;
+    border: 7px solid black;
+    display:block;
+}
+
+.homework_container {
+    padding: 10px;
+    margin: 10px;
+    width: 20%;
+    float: left;
+    border: 7px solid black;
+    display:inline-block; 
+}
+
+.weather_container {
+    padding: 10px;
+    margin: 10px;
+    width: 20%;
+    float: left;
+    border: 7px solid black;
+    display:block;
+}
+
+.class_container {
+    padding: 10px;
+    margin: 10px;
+    width: 20%;
+    float: left;
+    border: 7px solid black;
+    display:block;
+}
+
+.clock {
+    padding: 10px;
+    margin: 10px;   
+    width: 20%;
+    float: right;
+    border: 7px solid black;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#time {
+    font-size: 600%;
+}

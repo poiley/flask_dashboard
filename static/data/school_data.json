@@ -1,0 +1,20 @@
+{
+    "classes": {
+        "0": "Discrete Mathematics, CS 260, and CS 223.",
+        "1": "Linear Algebra and Physics lecture.",
+        "2": "Discrete Mathematics, CS 260, CS 223, and Physics Lab.",
+        "3": "Linear Algebra and Physics lecture.",
+        "4": "Discrete Mathematics, CS 260, and CS 223.",
+        "5": "Nothing! It's Saturday! :)",
+        "6": "Sunday, relax. Get some work done. Prep for the week ahead."
+    },
+    "homework": { 
+        "0": "CS 223 PA.",
+        "1": "Linear Algebra and Physics online.",
+        "2": "CS 260 HW.",
+        "3": "Linear Algebra and Physics online.",
+        "4": "Discrete.",
+        "5": "N/A",
+        "6": "Nothing explicitly due but maybe... study?"
+    }
+}
