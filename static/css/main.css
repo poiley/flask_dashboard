@@ -1,62 +1,88 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
-html, body { height: 100%; font-family: "Open Sans",serif;}
+html, body { height: 98%; font-family: "Open Sans",serif;}
 
-.twitter_timeline {
-    padding: 10px;
-    margin: 10px;
-    width: 20%;
-    float: left;
-    border: 7px solid black;
-    display:block;
+.main_container {
+    width: 70%;
+    height: 60%;
+
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    margin: 0 auto;
+
+    padding-top: 5%;
+
+    text-align: left;
 }
 
-.news_container {
-    padding: 10px;
-    margin: 10px;
-    width: 20%;
+.menu_bar {
+    width: 25%;
+    height: 70%;
+
+    text-align: center;
     float: left;
-    border: 7px solid black;
-    display:block;
+
+    padding: 5%;
 }
 
-.homework_container {
-    padding: 10px;
-    margin: 10px;
-    width: 20%;
+.menu_item { 
+    width: 32.5%;
+    height: 25%;
+
     float: left;
-    border: 7px solid black;
-    display:inline-block; 
+
+    margin: 5%;
+
+    border: 8px solid black;
 }
 
-.weather_container {
-    padding: 10px;
-    margin: 10px;
-    width: 20%;
-    float: left;
-    border: 7px solid black;
-    display:block;
+.icon { 
+    width: 80%;
+    height: 80%;
+    padding: 10%;
 }
 
-.class_container {
-    padding: 10px;
-    margin: 10px;
-    width: 20%;
+.divider { 
+    height: 70%;
+   
     float: left;
-    border: 7px solid black;
-    display:block;
+
+    margin-left: 3%;
+    padding: 5% 5% 5% 3%;
+
+    border-left: 10px solid black;
+}
+
+.content {
+    width: 50%;
+    float: left;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    font-size: 1.5em;
 }
 
 .clock {
-    padding: 10px;
-    margin: 10px;   
-    width: 20%;
-    float: right;
-    border: 7px solid black;
+    width: 15%;
+    height: 10%;
+    
+    text-align: right;
+    padding-right: 1%;
+    font-size: 3em;
+
     position: absolute;
-    top: 0;
     right: 0;
+    top: 5%;
 }
 
-#time {
-    font-size: 600%;
+.weather_img {
+    width: 20%;
+    height: 30%;
+    float: left;
+    padding-right: 10%;
+}
+
+.weather {
+    float: left;
+    width: 50%;
 }

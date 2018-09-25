@@ -9,11 +9,32 @@ WOEID = 12799510
 
 @app.route("/")
 def home():
-    return render_template("index.html", 
-                        headlines=get_headlines_formatted("https://reddit.com/r/worldnews.rss", 3), 
+    return render_template("index.html",
                         weather=get_weather_formatted(), 
                         classes=get_classes(),
-                        homework=get_homework())
+                        homework=get_homework(),
+                        imgur_album="nCUUFIa")
+
+@app.route("/news")
+def news():
+    return render_template("news.html", headlines=get_headlines("https://reddit.com/r/worldnews.rss", 3))
+
+@app.route("/weather")
+def weather():
+    file_str = "cloud.png"
+    return render_template("weather.html", location=get_location(), weather_img=file_str, date=get_date_formatted(), weather=get_weather_formatted())
+
+@app.route("/school")
+def school():
+    return render_template("school.html", classes=get_classes(), homework=get_homework())
+
+@app.route("/twitter")
+def twitter():
+    return render_template("twitter.html")
+
+@app.route("/imgur")
+def imgur():
+    return render_template("imgur.html", imgur_album="nCUUFIa")
 
 def get_homework():
     with open("static/data/school_data.json") as f:
@@ -25,9 +46,15 @@ def get_classes():
         d = json.loads(f.read())
         return d["classes"][str(datetime.today().weekday())]
 
+def get_date_formatted():
+    return get_weather().condition.date
+
+def get_location():
+    return get_weather().location.city
+
 def get_weather_formatted():
     w = get_weather().condition
-    return "{} - It's currently {} and {}°F outside.".format(w.date, w.text, w.temp)
+    return "It's currently {} and {}°F outside.".format(w.text, w.temp)
 
 def get_weather():
     return Weather(unit=Unit.FAHRENHEIT).lookup(WOEID)

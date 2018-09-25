@@ -1,6 +1,6 @@
 News - done
 
-Twitter
+Twitter - done
 
 Weather - done
 
@@ -10,4 +10,6 @@ Now Playing
 
 Classes Today - done
 
-Homework Today
+Homework Today - done
+
+Imgur outfit ideas - done

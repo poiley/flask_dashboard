@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Home</title>
-        <link rel="stylesheet"  href="static/css/main.css">
+        <link rel="stylesheet" href="static/css/main.css">
 
         <script>
             function startTime() {
@@ -11,13 +11,13 @@
                 var m = checkTime(today.getMinutes());
                 var s = checkTime(today.getSeconds());
 
-                document.getElementById('time').innerHTML = (h % 12) + ":" + m + ":" + s;
-                t = setTimeout(function(){ startTime() }, 500);
+                document.getElementById('time').innerHTML = (h % 12) + ":" + m;
+                t = setTimeout(function () { startTime() }, 500);
             }
-            
+
             function checkTime(i) {
-                if (i<10) {
-                    i="0" + i;
+                if (i < 10) {
+                    i = "0" + i;
                 }
                 return i;
             }
@@ -26,11 +26,13 @@
 
     <body onload="startTime()">
         <div class="main_container">
+            <div class="clock" id="time"></div>
+
             <div class="menu_bar">
                 <a href="{{ url_for('home') }} ">
                     <div class="menu_item">
                         <img class="icon" src="static/img/clock.png" />
-            
+
                     </div>
                 </a>
                 <a href="{{ url_for('news') }} ">
@@ -38,25 +40,25 @@
                         <img class="icon" src="static/img/news.png" />
                     </div>
                 </a>
-            
+
                 <a href="{{ url_for('weather') }} ">
                     <div class="menu_item">
                         <img class="icon" src="static/img/cloud.png" />
                     </div>
                 </a>
-            
+
                 <a href="{{ url_for('school') }} ">
                     <div class="menu_item">
                         <img class="icon" src="static/img/school.png" />
                     </div>
                 </a>
-            
+
                 <a href="{{ url_for('twitter') }} ">
                     <div class="menu_item">
                         <img class="icon" src="static/img/twitter.png" />
                     </div>
                 </a>
-            
+
                 <a href="{{ url_for('imgur') }} ">
                     <div class="menu_item">
                         <img class="icon" src="static/img/imgur.png" />
@@ -66,8 +68,11 @@
 
             <div class="divider"></div>
 
-            <div class="content" id="time" style="font-size: 9vw">
-
+            <div class="content">
+                <h2>Classes</h2> <br/>
+                {{ classes }} <br/>
+                <h2>Homework</h2> <br/>
+                {{ homework}}
             </div>
         </div>
     </body>
