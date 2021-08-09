@@ -15,7 +15,7 @@ MarkupSafe==1.0
 mccabe==0.6.1
 pycodestyle==2.4.0
 pylint==2.1.1
-pywin32==223
+pywin32==301
 requests==2.19.1
 six==1.11.0
 urllib3==1.23
